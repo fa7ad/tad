@@ -123,7 +123,7 @@ const ppSQLSelect = (
 
   if (typeof fromVal === "string") {
     // Hmmm. We previously enclosed fromVal with quoteCol, but
-    // this broke Snowflake when it had a fully qualified table name.
+    // Handle fully qualified table names
     // Let's try eliminating for now, but if we need to restore, may need
     // a special 'quoteTableName' method added to dialect....
     dst.push(fromVal + "\n");

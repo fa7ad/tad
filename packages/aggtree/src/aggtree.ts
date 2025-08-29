@@ -143,15 +143,10 @@ export class VPivotTree {
       aggMap != null ? aggCols.map((cid) => [aggMap[cid], cid]) : aggCols;
 
     if (path.length < this.pivotColumns.length) {
-      /* was: 
-      pathQuery = pathQuery
-        .groupBy([this.pivotColumns[path.length]], gbAggs)
-        .mapColumnsByIndex({
-          "0": pivotColumnInfo,
-        });
-        ...but this leads to ambiguity in the use of the pivot column name, that some SQL engines (BigQuery) don't like,
-        so we'll push the definition of _pivot column inside the GroupBy:
-      */
+      /* 
+       * Define _pivot column inside GroupBy to avoid column name ambiguity
+       * in SQL engines:
+       */
       pathQuery = pathQuery
         .extend("_pivot", asString(col(this.pivotColumns[path.length])), {
           displayName: "_pivot",

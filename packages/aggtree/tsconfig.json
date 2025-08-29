@@ -4,8 +4,10 @@
     "downlevelIteration": true,
     "declaration": true,
     "strict": true,
-    "target": "ES5",
-    "lib": ["es6", "es2017", "dom"]
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "lib": ["es2022", "dom"]
   },
   "include": ["./src/*", "./test/*"]
 }
