@@ -5,12 +5,9 @@ import { BigQueryDialect } from "./dialects/BigQueryDialect";
 import { PrestoDialect } from "./dialects/PrestoDialect";
 import { SnowflakeDialect } from "./dialects/SnowflakeDialect";
 
-export const dialects: { [dialectName: string]: SQLDialect } = {
+export const dialects: { [key: string]: SQLDialect } = {
   duckdb: DuckDBDialect,
-  sqlite: SQLiteDialect,
-  bigquery: BigQueryDialect,
-  presto: PrestoDialect,
-  snowflake: SnowflakeDialect,
+  sqlite: SQLiteDialect
 };
 
 export { BigQueryDialect, PrestoDialect, SQLiteDialect, SnowflakeDialect, DuckDBDialect };

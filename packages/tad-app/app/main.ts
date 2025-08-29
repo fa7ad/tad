@@ -1,18 +1,12 @@
 import "source-map-support/register";
-import commandLineArgs, {
-  CommandLineOptions,
-  ParseOptions,
-} from "command-line-args";
+import commandLineArgs, { CommandLineOptions, ParseOptions } from "command-line-args";
 import getUsage from "command-line-usage";
 import log from "electron-log";
-import * as logLevel from "loglevel";
+import logLevel from "loglevel";
 import * as reltab from "reltab";
-import * as reltabBigQuery from "reltab-bigquery";
-import "reltab-bigquery";
 import * as reltabDuckDB from "reltab-duckdb";
-import "reltab-duckdb";
 import * as reltabFS from "reltab-fs";
-import "reltab-fs";
+import "reltab-duckdb";
 import * as setup from "./setup";
 import * as quickStart from "./quickStart";
 import * as appMenu from "./appMenu";
@@ -47,17 +41,7 @@ let delay = (ms: number) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-const covid19ConnKey: DataSourceId = {
-  providerName: "bigquery",
-  resourceId: JSON.stringify({
-    projectId: "bigquery-public-data",
-    datasetName: "covid19_jhu_csse",
-  }),
-};
 
-const initBigquery = async () => {
-  const rtc = await reltab.getConnection(covid19ConnKey);
-};
 
 class ElectronTransportServer implements TransportServer {
   registerInvokeHandler(
@@ -90,8 +74,6 @@ const initMainAsync = async (options: any): Promise<void> => {
     log.info("initMainAsync -- showQueries enabled, set log level to INFO");
   }
   log.debug("initMainAsync: ", options);
-
-  // await initBigquery();
 
   /*
   let rtc: reltabSqlite.SqliteContext;
