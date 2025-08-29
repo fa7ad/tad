@@ -37,7 +37,7 @@
   "author": "Antony Courtney <antony@antonycourtney.com>",
   "license": "MIT",
   "dependencies": {
-    "aggtree": "^0.12.0",
+    "aggtree": "*",
     "babel-cli": "^6.26.0",
     "babel-plugin-flow-to-typescript": "^0.6.0",
     "command-line-args": "^5.2.0",
@@ -50,18 +50,18 @@
     "oneref": "^0.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "reltab": "^0.12.0",
-    "reltab-bigquery": "^0.12.0",
-    "reltab-duckdb": "^0.12.0",
-    "reltab-fs": "^0.12.0",
+    "reltab": "*",
+    "reltab-duckdb": "*",
+    "reltab-fs": "*",
     "source-map-support": "^0.5.21",
-    "tadviewer": "^0.12.0"
+    "tadviewer": "*"
   },
   "devDependencies": {
     "@blueprintjs/icons": "^4.10.1",
     "@electron/notarize": "^2.3.2",
     "@types/command-line-args": "^5.2.0",
     "@types/command-line-usage": "^5.0.2",
+    "@types/node": "^22.0.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.2.4",
     "@types/react-select": "^5.0.0",
@@ -84,17 +84,16 @@
     "source-map-loader": "^3.0.1",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
-    "webpack": "^5.65.0",
+    "webpack": "^5.101.3",
     "webpack-cli": "^4.9.1",
     "webpack-node-externals": "^3.0.0"
   },
   "build": {
-    "appId": "com.antonycourtney.tad",
+    "appId": "com.fa7ad.tad",
     "asarUnpack": [
       "**/*.node",
       "**/*reltab*"
     ],
-    "afterPack": "./tools/afterPack.js",
     "afterSign": "./tools/notarize.js",
     "buildNumber": "1",
     "directories": {

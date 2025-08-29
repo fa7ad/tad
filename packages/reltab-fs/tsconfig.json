@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "lib": ["es2022", "dom"],
     "outDir": "./dist",
     "declaration": true,
-    "sourceMap": true,
-    "target": "ES5",
-    "strict": true,
-    "lib": ["es6", "es2017", "dom"]
+    "sourceMap": true
   },
   "include": ["./src/*", "./test/*.ts"]
 }
