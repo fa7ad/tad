@@ -1,5 +1,5 @@
 {
-  "name": "tad",
+  "name": "tad-root",
   "version": "0.14.0",
   "description": "Lerna monorepo for Tabular data viewer libraries and apps",
   "private": true,
@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.0.0",
+    "electron-builder": "^24.13.3",
     "jest": "^29.7.0",
     "lerna": "^8.2.3",
     "rimraf": "^5.0.5",
@@ -26,6 +27,7 @@
     "build:drivers": "lerna run build --scope 'reltab-*'",
     "build:components": "lerna run build --scope 'tadviewer'",
     "build:app": "lerna run build --scope 'tad-app'",
+    "distribute": "lerna run distribute",
     "test": "lerna run test",
     "version": "lerna version"
   },
@@ -33,5 +35,6 @@
     "packages": [
       "packages/*"
     ]
-  }
+  },
+  "packageManager": "yarn@4.9.4"
 }
