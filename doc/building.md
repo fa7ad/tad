@@ -2,7 +2,7 @@
 
 ## Pre-requisites: Node and Yarn
 
-To build Tad, you should have [node](https://nodejs.org/en/) and `yarn`(https://yarnpkg.com/en/docs/install) installed. The versions of these tools used for development are:
+To build Tad, you should have [node](https://nodejs.org/en/) and `yarn`(https://yarnpkg.com/en/docs/install) installed (just enable corepack). The versions of these tools used for development are:
 
 ```bash
 $ node --version
@@ -35,7 +35,9 @@ To build all packages, run:
 $ yarn build
 ```
 
-The build process will handle all packages in the correct order. If you need to build a specific package, you can cd into its directory and run `yarn build`.
+The build process will handle all packages in the correct order. If you need to build a specific package, you can run `yarn workspace <package-name> build`.
+
+## Running the Desktop app
 
 ## Trying the Desktop app
 

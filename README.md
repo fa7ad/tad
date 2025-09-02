@@ -74,5 +74,6 @@ The essential packages that make up this version of Tad are:
 1. Clone this repository
 2. Run `yarn` at the root
 3. Run `yarn build` at the root to build all packages
+4. Run `yarn release:app:dev` at the root to build the Electron app (`:dev` option just disables publishing assets). The build output will be in the `packages/tad-app/dist/` directory.
 
 For detailed instructions, see [doc/building.md](doc/building.md)

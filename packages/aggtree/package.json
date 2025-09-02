@@ -18,19 +18,19 @@
     "reltab": "workspace:*",
     "reltab-sqlite": "workspace:*"
   },
-  "devDependencies": {
-    "@types/jest": "^30.0.0",
-    "@types/node": "^22.0.0",
-    "jest": "^30.1.2",
-    "prettier": "^3.6.2",
-    "ts-jest": "^29.4.1",
-    "typescript": "^5.9.2"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antonycourtney/tad.git"
   },
   "bugs": {
     "url": "https://github.com/antonycourtney/tad/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.0",
+    "jest": "^30.1.3",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.9.2"
   }
 }

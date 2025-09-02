@@ -1,9 +1,8 @@
-// webpack.config.js
-
-var webpack = require("webpack");
-var path = require("path");
-var fs = require("fs");
-var nodeExternals = require("webpack-node-externals");
+const webpack = require("webpack");
+const path = require("path");
+const fs = require("fs");
+const nodeExternals = require("webpack-node-externals");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 process.traceDeprecation = true;
 
@@ -90,6 +89,15 @@ function config(nodeEnv) {
         "process.env": {
           NODE_ENV: JSON.stringify(nodeEnv),
         },
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: "../tadviewer/dist", to: "." },
+          { from: "html", to: "." },
+          { from: "app/preload.js", to: "preload.js" },
+          { from: "res/AppIcon.icns", to: "../buildRes/icon.icns" },
+          { from: "res/blue_external_drive.icns", to: "../buildRes/dmgIcon.icns" },
+        ],
       }),
     ],
   };

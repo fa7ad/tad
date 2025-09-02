@@ -2,10 +2,10 @@ name: Build Tad
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [main]
+  workflow_dispatch: {}
 
 jobs:
   Windows:
@@ -17,10 +17,10 @@ jobs:
           node-version: 22.x
       - name: Install OpenSSL
         run: choco install openssl
-      - run: npm install
-      - run: npm run build
-      - run: yarn publish
-        working-directory: packages/tad-app
+      - run: corepack enable
+      - run: yarn
+      - run: yarn build
+      - run: yarn release:app
         env:
           OPENSSL_ROOT_DIR: C:\\Program Files\\OpenSSL-Win64
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -36,10 +36,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.x
-      - run: npm install
-      - run: npm run build
-      - run: yarn publish
-        working-directory: packages/tad-app
+      - run: corepack enable
+      - run: yarn
+      - run: yarn build
+      - run: yarn release:app
         env:
           BUILDNUMBER: " "
           BUILD_BUILDNUMBER: " "
@@ -57,10 +57,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.x
-      - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install openssl@3
-      - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install jq
-      - run: npm install
-      - run: npm run build
+      - run: corepack enable
+      - run: HOMEBREW_NO_AUTO_UPDATE=1 brew install openssl@3 jq
+      - run: yarn
+      - run: yarn build
       - name: Decode and Install Certificate
         run: |
           echo "${{ secrets.APPLE_CERTIFICATE }}" | base64 --decode > certificate.p12
@@ -69,8 +69,7 @@ jobs:
           security unlock-keychain -p "${{ secrets.APPLE_CERTIFICATE_PASSWORD }}" build.keychain
           security import certificate.p12 -k build.keychain -P "${{ secrets.APPLE_CERTIFICATE_PASSWORD }}" -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple: -s -k "${{ secrets.APPLE_CERTIFICATE_PASSWORD }}" build.keychain
-      - run: yarn publish
-        working-directory: packages/tad-app
+      - run: yarn release:app
         env:
           APPLEID: ${{ secrets.APPLEID }}
           APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
