@@ -5,14 +5,15 @@
 import { ColumnType, ColumnMetaMap, Schema } from "reltab";
 import { SQLiteDialect } from "reltab";
 import * as csv from "@fast-csv/parse";
-import * as _ from "lodash";
+import _ from "lodash";
 import * as path from "path";
 import * as stream from "stream";
-import * as through from "through";
+import through from "through";
 import * as fs from "fs";
 import * as sqlite3 from "sqlite3";
 import * as tp from "typed-promisify";
-import * as log from "loglevel";
+import log from "loglevel";
+import { promisify } from "util";
 
 // No typing info for these guys yet:
 const byline = require("byline");
@@ -448,19 +449,6 @@ const consumeStream = (
   });
 };
 
-const dbRun = tp.promisify(
-  (db: sqlite3.Database, query: string, cb: (res: any, err: any) => void) =>
-    db.run(query, cb)
-);
-const dbRunStmt = tp.promisify(
-  (
-    db: sqlite3.Database,
-    query: string,
-    params: any[],
-    cb: (res: any, err: any) => void
-  ) => db.run(query, params, cb)
-);
-
 /*
 const stmtRun = tp.promisify(
   (stmt: sqlite3.Statement, params: any[], cb: (res: any, err: any) => void) =>
@@ -508,6 +496,8 @@ const importData = async (
   options: ImportOpts
 ): Promise<FileMetadata> => {
   try {
+    const dbRun$ = promisify(db.run.bind(db));
+    const dbRunV$ = promisify((sql: string, params: any[], callback: any) => db.run.bind(db)(sql, params, callback))
     const hasHeaderRow = !options.noHeaderRow;
     const isEuroFormat = delimiter === ";";
     const tableName = md.tableName;
@@ -537,7 +527,7 @@ const importData = async (
       }
       rowVals.push(insertRowId++);
       // console.log("insertRow: rowVals: ", rowVals);
-      return dbRunStmt(db, insertStmtStr, rowVals);
+      return dbRunV$(insertStmtStr, rowVals);
     };
 
     /*
@@ -546,9 +536,9 @@ const importData = async (
      * We're currently wrapping all inserts in one huge transaction. Should probably break
      * this into more reasonable (50K rows?) chunks.
      */
-    await db.run(dropStmt);
+    await dbRun$(dropStmt);
     // log.debug("about to run: ", createStmt);
-    await db.run(createStmt);
+    await dbRun$(createStmt);
     // log.debug("table created");
     // await db.run("begin");
     // const insertStmt = await db.prepare(insertStmtStr);

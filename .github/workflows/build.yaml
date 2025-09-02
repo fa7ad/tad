@@ -19,7 +19,7 @@ jobs:
         run: choco install openssl
       - run: npm install
       - run: npm run build
-      - run: npm run publish
+      - run: yarn publish
         working-directory: packages/tad-app
         env:
           OPENSSL_ROOT_DIR: C:\\Program Files\\OpenSSL-Win64
@@ -38,7 +38,7 @@ jobs:
           node-version: 22.x
       - run: npm install
       - run: npm run build
-      - run: npm run publish
+      - run: yarn publish
         working-directory: packages/tad-app
         env:
           BUILDNUMBER: " "
@@ -69,7 +69,7 @@ jobs:
           security unlock-keychain -p "${{ secrets.APPLE_CERTIFICATE_PASSWORD }}" build.keychain
           security import certificate.p12 -k build.keychain -P "${{ secrets.APPLE_CERTIFICATE_PASSWORD }}" -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple: -s -k "${{ secrets.APPLE_CERTIFICATE_PASSWORD }}" build.keychain
-      - run: npm run publish
+      - run: yarn publish
         working-directory: packages/tad-app
         env:
           APPLEID: ${{ secrets.APPLEID }}

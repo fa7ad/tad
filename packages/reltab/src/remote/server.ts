@@ -3,8 +3,8 @@
  * remote service.
  */
 
-import * as log from "loglevel";
-import * as prettyHRTime from "pretty-hrtime";
+import log from "loglevel";
+import prettyHRTime from "pretty-hrtime";
 import {
   EngineReq,
   DbConnEvalQueryRequest,

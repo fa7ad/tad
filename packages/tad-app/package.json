@@ -9,22 +9,21 @@
     "url": "https://github.com/antonycourtney/tad.git"
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "build:dir": "mkdirp dist",
-    "build:tadviewer-assets": "recursive-copy -w node_modules/tadviewer/dist/public dist/public",
-    "build:html": "recursive-copy -w html dist",
-    "build:preload": "recursive-copy -w app/preload.js dist/preload.js",
-    "build:icon": "mkdirp buildRes && recursive-copy -w res/AppIcon.icns buildRes/icon.icns && recursive-copy -w res/blue_external_drive.icns buildRes/dmgIcon.icns",
-    "build-assets": "npm run build:dir && npm run build:html && npm run build:icon && npm run build:preload",
-    "build-dev": "npm run build-assets && webpack --mode development",
-    "build-prod": "npm run build-assets && webpack --env prod --mode production",
-    "build": "npm run build-prod && electron-builder install-app-deps",
+    "clean": "rm -vrf dist",
+    "build:dir": "mkdir -p dist",
+    "build:tadviewer-assets": "cp -vr ../tadviewer/dist/ dist/",
+    "build:html": "cp -vr html/ dist/",
+    "build:preload": "cp -v app/preload.js dist/preload.js",
+    "build:icon": "mkdir -p buildRes && cp -v res/AppIcon.icns buildRes/icon.icns && cp -v res/blue_external_drive.icns buildRes/dmgIcon.icns",
+    "build-assets": "yarn build:dir && yarn build:html && yarn build:icon && yarn build:preload",
+    "build-dev": "yarn build-assets && webpack --mode development",
+    "build-prod": "yarn build-assets && webpack --env prod --mode production",
+    "build": "electron-builder install-app-deps && yarn build-prod",
     "watch": "webpack --mode development --watch",
     "watch-prod": "webpack --env prod --mode production --watch",
     "pack": "electron-builder --dir",
     "dist": "electron-builder --publish=never",
     "dist-arm64": "electron-builder --arm64 --publish=never",
-    "predistribute": "npm run build",
     "distribute": "electron-builder",
     "start": "electron ."
   },
@@ -35,27 +34,8 @@
   ],
   "author": "Antony Courtney <antony@antonycourtney.com>",
   "license": "MIT",
-  "dependencies": {
-    "aggtree": "*",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-flow-to-typescript": "^0.6.0",
-    "command-line-args": "^6.0.1",
-    "command-line-usage": "^7.0.3",
-    "console.table": "^0.10.0",
-    "electron-log": "^4.4.4",
-    "electron-updater": "^4.6.1",
-    "fast-csv": "^4.3.6",
-    "loglevel": "^1.8.0",
-    "oneref": "^0.9.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "reltab": "*",
-    "reltab-duckdb": "*",
-    "reltab-fs": "*",
-    "source-map-support": "^0.5.21",
-    "tadviewer": "*"
-  },
   "devDependencies": {
+    "@babel/core": "^7.22.5",
     "@blueprintjs/icons": "^4.10.1",
     "@electron/notarize": "^2.3.2",
     "@types/command-line-args": "^5.2.0",
@@ -83,93 +63,28 @@
     "source-map-loader": "^3.0.1",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
+    "typescript": "5.9.2",
     "webpack": "^5.101.3",
     "webpack-cli": "^4.9.1",
     "webpack-node-externals": "^3.0.0"
   },
-  "build": {
-    "appId": "com.fa7ad.tad",
-    "asarUnpack": [
-      "**/*.node",
-      "**/*reltab*"
-    ],
-    "afterSign": "./tools/notarize.js",
-    "buildNumber": "1",
-    "directories": {
-      "buildResources": "buildRes"
-    },
-    "dmg": {
-      "icon": "dmgIcon.icns",
-      "sign": false
-    },
-    "extraResources": [
-      "tad.sh",
-      "examples"
-    ],
-    "files": [
-      "dist/**/*",
-      "build",
-      "node_modules"
-    ],
-    "fileAssociations": [
-      {
-        "ext": "csv",
-        "name": "Comma Separated Values",
-        "role": "Viewer"
-      },
-      {
-        "ext": "tsv",
-        "name": "Tab Separated Values",
-        "role": "Viewer"
-      },
-      {
-        "ext": "tad",
-        "name": "Tad Saved Workspace",
-        "role": "Editor"
-      },
-      {
-        "ext": "parquet",
-        "name": "Parquet files",
-        "role": "Viewer"
-      },
-      {
-        "ext": "sqlite",
-        "name": "Sqlite files",
-        "role": "Viewer"
-      },
-      {
-        "ext": "duckdb",
-        "name": "DuckDb files",
-        "role": "Viewer"
-      },
-      {
-        "ext": "csv.gz",
-        "name": "Compressed CSV files",
-        "role": "Viewer"
-      }
-    ],
-    "linux": {
-      "target": [
-        "deb",
-        "rpm",
-        "tar.bz2"
-      ]
-    },
-    "mac": {
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false,
-      "category": "public.app-category.developer-tools",
-      "entitlements": "res/entitlements.mac.plist",
-      "entitlementsInherit": "res/entitlements.mac.plist",
-      "target": [
-        "zip",
-        "dmg"
-      ]
-    },
-    "nodeGypRebuild": false,
-    "nsis": {
-      "oneClick": false
-    },
-    "productName": "Tad"
+  "dependencies": {
+    "aggtree": "workspace:*",
+    "babel-cli": "^6.26.0",
+    "command-line-args": "^6.0.1",
+    "command-line-usage": "^7.0.3",
+    "console.table": "^0.10.0",
+    "electron-log": "^4.4.4",
+    "electron-updater": "^4.6.1",
+    "fast-csv": "^4.3.6",
+    "loglevel": "^1.8.0",
+    "oneref": "^0.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reltab": "workspace:*",
+    "reltab-duckdb": "workspace:*",
+    "reltab-fs": "workspace:*",
+    "source-map-support": "^0.5.21",
+    "tadviewer": "workspace:*"
   }
 }

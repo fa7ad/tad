@@ -53,7 +53,7 @@ Beyond maintaining a streamlined version, this fork aims to add some new capabil
 
 Key characteristics of this fork:
 
-- Maintains the modular [Lerna](https://lerna.js.org/) based monorepo structure
+- Maintains the modular Yarn Workspaces based monorepo structure
 - Keeps the TypeScript codebase and React Hooks based UI
 - Uses DuckDB exclusively as the database backend for optimal performance
 - Removes experimental features like web deployment and additional database backends
@@ -72,7 +72,7 @@ The essential packages that make up this version of Tad are:
 # Building from Source
 
 1. Clone this repository
-2. Run `npm install` at the root
-3. Run `npm run build` at the root to build all packages
+2. Run `yarn` at the root
+3. Run `yarn build` at the root to build all packages
 
 For detailed instructions, see [doc/building.md](doc/building.md)

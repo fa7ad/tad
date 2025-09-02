@@ -1,21 +1,16 @@
-import * as duckdb from "duckdb-async";
-import * as _ from "lodash";
+import _ from "lodash";
 import * as reltab from "reltab";
 import {
-  asString,
   DataSourceConnection,
   DbDataSource,
   DuckDBDialect,
-  tableQuery,
   binsForColumn,
   columnHistogramQuery,
   getNumericColumnHistogramData,
 } from "reltab";
 import * as reltabDuckDB from "../src/reltab-duckdb";
 import * as util from "./testUtils";
-import { getFormattedRows } from "./testUtils";
 
-const { col, constVal } = reltab;
 
 const coreTypes = reltab.SQLiteDialect.coreColumnTypes;
 
@@ -104,7 +99,7 @@ test("full histogram query for all column", async () => {
   );
 
   console.log("full histogram infos: ", histoInfos);
-  const dbds = testCtx as DbDataSource;
+  const dbds = testCtx;
 
   const sqlQuery = await dbds.getSqlForQuery(histoQuery!);
   console.log("full histogram query:\n", sqlQuery);

@@ -1,5 +1,5 @@
 import * as reltab from "reltab";
-import * as _ from "lodash";
+import _ from "lodash";
 import { Path, PathTree } from "./PathTree";
 import {
   DataSourceConnection,
@@ -9,8 +9,7 @@ import {
   asString,
   ValExp,
   ColumnMapInfo,
-} from "reltab"; // eslint-disable-line
-import { convertTypeAcquisitionFromJson } from "typescript";
+} from "reltab";
 
 export * from "./PathTree";
 

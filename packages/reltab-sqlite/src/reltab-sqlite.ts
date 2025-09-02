@@ -1,4 +1,4 @@
-import * as log from "loglevel";
+import log from "loglevel";
 import {
   ColumnMetaMap,
   ColumnStatsMap,
@@ -16,9 +16,9 @@ import {
   Schema,
   SQLDialect,
   SQLiteDialect,
-} from "reltab"; // eslint-disable-line
+} from "reltab";
 import * as sqlite3 from "sqlite3";
-import * as tp from "typed-promisify";
+import { promisify } from "util";
 
 export * from "./csvimport";
 
@@ -36,7 +36,7 @@ let viewCounter = 0;
 
 const genViewName = (): string => `tad_tmpView_${viewCounter++}`;
 
-const dbAll = tp.promisify(
+const dbAll = promisify(
   (db: sqlite3.Database, query: string, cb: (err: any, res: any) => void) =>
     db.all(query, cb)
 );

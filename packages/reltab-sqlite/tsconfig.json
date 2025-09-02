@@ -1,12 +1,35 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
     "outDir": "./dist",
+    "module": "nodenext",
+    "target": "esnext",
+    // For nodejs:
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node"
+    ],
+    // Other Outputs
+    "sourceMap": true,
     "declaration": true,
-    "target": "ES2022",
+    "declarationMap": true,
+    // Recommended Options
     "strict": true,
-    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
     "skipLibCheck": true,
-    "lib": ["es2022", "dom"]
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/*", "./test/*.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test"
+  ]
 }

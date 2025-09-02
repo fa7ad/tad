@@ -1,47 +1,47 @@
 # Building Tad from Sources
 
-## Pre-requisites: Node, Npm and Lerna
+## Pre-requisites: Node and Yarn
 
-To build Tad, you should have [node](https://nodejs.org/en/) and `npm`(https://www.npmjs.com/get-npm) (included when you install Node.js) installed. The versions of these tools used for development are:
+To build Tad, you should have [node](https://nodejs.org/en/) and `yarn`(https://yarnpkg.com/en/docs/install) installed. The versions of these tools used for development are:
 
 ```bash
 $ node --version
 v22.17.1
-$ npm --version
-11.4.2
+$ yarn --version
+4.9.4
 ```
 
-Once you have Node installed, run `npm install` at the top level:
+Once you have Node and Yarn installed, run `yarn install` at the top level:
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
 ## Installing dependencies
 
-The project uses npm workspaces and Lerna for package management. To install all dependencies, simply run:
+The project uses Yarn Workspaces for package management. To install all dependencies, simply run:
 
 ```bash
-$ npm install
+$ yarn install
 ```
 
-This will install all dependencies and link local packages together. npm workspaces automatically handles package hoisting and local package linking.
+This will install all dependencies and link local packages together. Yarn Workspaces automatically handles package hoisting and local package linking.
 
 ## Building Everything
 
 To build all packages, run:
 
 ```bash
-$ npm run build
+$ yarn build
 ```
 
-The build process will handle all packages in the correct order. If you need to build a specific package, you can cd into its directory and run `npm run build`.
+The build process will handle all packages in the correct order. If you need to build a specific package, you can cd into its directory and run `yarn build`.
 
 ## Trying the Desktop app
 
 ```bash
 $ cd packages/tad-app
-$ npm start -- csv/movie_metadata.csv
+$ yarn start -- csv/movie_metadata.csv
 ```
 
 If all went well, the Tad app should start with a view of `csv/movie_metadata.csv`
@@ -50,10 +50,10 @@ If all went well, the Tad app should start with a view of `csv/movie_metadata.cs
 
 When iterating on the UI during development, I recommend keeping a couple of windows open:
 
-- In `packages\tadviewer`, run `npm run watch`
-- In `packages\tad-app`, run `npm run watch`
+- In `packages\tadviewer`, run `yarn watch`
+- In `packages\tad-app`, run `yarn watch`
 
-Note that you'll still have to run `npm run build` if you make changes in any of the core library packages (`reltab`, `reltab-duckdb`, `aggtree`).
+Note that you'll still have to run `yarn build` if you make changes in any of the core library packages (`reltab`, `reltab-duckdb`, `aggtree`).
 
 # Additional Info
 

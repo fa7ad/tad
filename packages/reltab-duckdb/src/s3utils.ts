@@ -1,8 +1,8 @@
 /**
  * Support routines for using s3 URLs with DuckDb.
  */
-import { Connection, Database } from "duckdb-async";
-import * as log from "loglevel";
+import { Connection } from "duckdb-async";
+import log from "loglevel";
 
 /**
  * Initialize S3 variables on a DuckDb connection from env vars
