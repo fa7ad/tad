@@ -1,7 +1,7 @@
 import * as fs from "fs";
-import * as log from "loglevel";
 import * as path from "path";
 import * as fsPromises from "fs/promises";
+import log from "loglevel";
 
 import {
   ColumnStatsMap,

@@ -1,5 +1,5 @@
 import * as reltab from "reltab";
-import * as _ from "lodash";
+import _ from "lodash";
 import { Path, PathTree } from "./PathTree";
 import {
   DataSourceConnection,
@@ -9,8 +9,7 @@ import {
   asString,
   ValExp,
   ColumnMapInfo,
-} from "reltab"; // eslint-disable-line
-import { convertTypeAcquisitionFromJson } from "typescript";
+} from "reltab";
 
 export * from "./PathTree";
 
@@ -143,15 +142,10 @@ export class VPivotTree {
       aggMap != null ? aggCols.map((cid) => [aggMap[cid], cid]) : aggCols;
 
     if (path.length < this.pivotColumns.length) {
-      /* was: 
-      pathQuery = pathQuery
-        .groupBy([this.pivotColumns[path.length]], gbAggs)
-        .mapColumnsByIndex({
-          "0": pivotColumnInfo,
-        });
-        ...but this leads to ambiguity in the use of the pivot column name, that some SQL engines (BigQuery) don't like,
-        so we'll push the definition of _pivot column inside the GroupBy:
-      */
+      /* 
+       * Define _pivot column inside GroupBy to avoid column name ambiguity
+       * in SQL engines:
+       */
       pathQuery = pathQuery
         .extend("_pivot", asString(col(this.pivotColumns[path.length])), {
           displayName: "_pivot",

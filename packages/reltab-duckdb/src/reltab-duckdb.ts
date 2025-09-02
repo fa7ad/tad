@@ -1,5 +1,5 @@
 import { Connection, Database } from "duckdb-async";
-import * as log from "loglevel";
+import log from "loglevel";
 import {
   colIsNumeric,
   ColumnMetadata,
@@ -19,8 +19,7 @@ import {
   Row,
   Schema,
   SQLDialect,
-  TextSummaryStats,
-} from "reltab"; // eslint-disable-line
+} from "reltab";
 import { initS3 } from "./s3utils";
 
 export * from "./csvimport";
@@ -66,8 +65,8 @@ class ConnectionPool {
   }
 }
 
-const parsePercentage = (s: string | undefined): number | null => {
-  if (s != undefined && s.endsWith("%")) {
+const parsePercentage = (s?: string): number | null => {
+  if (s != undefined && s.toString().endsWith("%")) {
     const noPct = s.replace(/%$/, "");
     const ret = Number.parseFloat(noPct) / 100.0;
     return ret;

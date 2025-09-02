@@ -1,10 +1,35 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
     "outDir": "./dist",
+    "module": "nodenext",
+    "target": "esnext",
+    // For nodejs:
+    "lib": [
+      "esnext"
+    ],
+    "types": [
+      "node"
+    ],
+    // Other Outputs
+    "sourceMap": true,
     "declaration": true,
-    "target": "ES5",
+    "declarationMap": true,
+    // Recommended Options
     "strict": true,
-    "lib": ["es6", "es2017", "dom"]
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/*", "./test/*.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test"
+  ]
 }

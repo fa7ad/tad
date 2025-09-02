@@ -1,83 +1,83 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`async aggTree sortedTreeQuery test 1`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "_path0": "Engineering & Systems Engineering",
       "_sortVal_0_0": 422244,
       "_sortVal_0_1": 309734,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_sortVal_0_0": 1389290,
       "_sortVal_0_1": 1030722,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Finance & Accounting",
       "_sortVal_0_0": 287139,
       "_sortVal_0_1": 208744,
       "_sortVal_0_2": "Controller-Treasurer",
     },
-    Object {
+    {
       "_path0": "Legal & Paralegal",
       "_sortVal_0_0": 766571,
       "_sortVal_0_1": 564028,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_sortVal_0_0": 594761,
       "_sortVal_0_1": 366223,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Police",
       "_sortVal_0_0": 127660,
       "_sortVal_0_1": 75701,
       "_sortVal_0_2": "Revenue Protection Guard",
     },
-    Object {
+    {
       "_path0": "Public Affairs & Marketing",
       "_sortVal_0_0": 181955,
       "_sortVal_0_1": 130035,
       "_sortVal_0_2": "Department Manager Gov't & Comm Rel",
     },
-    Object {
+    {
       "_path0": "Safety",
       "_sortVal_0_0": 211941,
       "_sortVal_0_1": 152125,
       "_sortVal_0_2": "Chief Safety Officer",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_sortVal_0_0": 709998,
       "_sortVal_0_1": 413909,
       "_sortVal_0_2": null,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "_path0": Object {
+  "schema": {
+    "columnMetadata": {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "_sortVal_0_0": Object {
+      "_sortVal_0_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_0_1": Object {
+      "_sortVal_0_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_0_2": Object {
+      "_sortVal_0_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
     },
-    "columns": Array [
+    "columns": [
       "_path0",
       "_sortVal_0_0",
       "_sortVal_0_1",
@@ -90,134 +90,134 @@ TableRep {
 
 exports[`async aggTree sortedTreeQuery test 2`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "_path0": "Engineering & Systems Engineering",
       "_path1": "Group Manager Systems Capital Prog",
       "_sortVal_1_0": 212535,
       "_sortVal_1_1": 152434,
       "_sortVal_1_2": "Group Manager Systems Capital Prog",
     },
-    Object {
+    {
       "_path0": "Engineering & Systems Engineering",
       "_path1": "Group Manager, Capital Projects",
       "_sortVal_1_0": 209709,
       "_sortVal_1_1": 157300,
       "_sortVal_1_2": "Group Manager, Capital Projects",
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_path1": "Assistant General Manager Operations",
       "_sortVal_1_0": 288160,
       "_sortVal_1_1": 212647,
       "_sortVal_1_2": "Assistant General Manager Operations",
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_path1": "Deputy General Manager",
       "_sortVal_1_0": 281548,
       "_sortVal_1_1": 206914,
       "_sortVal_1_2": "Deputy General Manager",
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_path1": "General Manager",
       "_sortVal_1_0": 819582,
       "_sortVal_1_1": 611161,
       "_sortVal_1_2": "General Manager",
     },
-    Object {
+    {
       "_path0": "Finance & Accounting",
       "_path1": "Controller-Treasurer",
       "_sortVal_1_0": 287139,
       "_sortVal_1_1": 208744,
       "_sortVal_1_2": "Controller-Treasurer",
     },
-    Object {
+    {
       "_path0": "Legal & Paralegal",
       "_path1": "General Counsel",
       "_sortVal_1_0": 321543,
       "_sortVal_1_1": 238269,
       "_sortVal_1_2": "General Counsel",
     },
-    Object {
+    {
       "_path0": "Legal & Paralegal",
       "_path1": "Senior Attorney",
       "_sortVal_1_0": 445028,
       "_sortVal_1_1": 325759,
       "_sortVal_1_2": "Senior Attorney",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Electrician",
       "_sortVal_1_0": 113775,
       "_sortVal_1_1": 59817,
       "_sortVal_1_2": "Electrician",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Structures Inspector",
       "_sortVal_1_0": 124962,
       "_sortVal_1_1": 77446,
       "_sortVal_1_2": "Structures Inspector",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Transit Vehicle Mechanic",
       "_sortVal_1_0": 104260,
       "_sortVal_1_1": 74068,
       "_sortVal_1_2": "Transit Vehicle Mechanic",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Vehicle Inspector",
       "_sortVal_1_0": 123432,
       "_sortVal_1_1": 77446,
       "_sortVal_1_2": "Vehicle Inspector",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Wayside Inspector",
       "_sortVal_1_0": 128332,
       "_sortVal_1_1": 77446,
       "_sortVal_1_2": "Wayside Inspector",
     },
-    Object {
+    {
       "_path0": "Police",
       "_path1": "Revenue Protection Guard",
       "_sortVal_1_0": 127660,
       "_sortVal_1_1": 75701,
       "_sortVal_1_2": "Revenue Protection Guard",
     },
-    Object {
+    {
       "_path0": "Public Affairs & Marketing",
       "_path1": "Department Manager Gov't & Comm Rel",
       "_sortVal_1_0": 181955,
       "_sortVal_1_1": 130035,
       "_sortVal_1_2": "Department Manager Gov't & Comm Rel",
     },
-    Object {
+    {
       "_path0": "Safety",
       "_path1": "Chief Safety Officer",
       "_sortVal_1_0": 211941,
       "_sortVal_1_1": 152125,
       "_sortVal_1_2": "Chief Safety Officer",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_path1": "Chief Transportation Officer",
       "_sortVal_1_0": 238211,
       "_sortVal_1_1": 170383,
       "_sortVal_1_2": "Chief Transportation Officer",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_path1": "Station Agent",
       "_sortVal_1_0": 352988,
       "_sortVal_1_1": 182342,
       "_sortVal_1_2": "Station Agent",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_path1": "Train Operator",
       "_sortVal_1_0": 118799,
@@ -225,30 +225,30 @@ TableRep {
       "_sortVal_1_2": "Train Operator",
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "_path0": Object {
+  "schema": {
+    "columnMetadata": {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "_path1": Object {
+      "_path1": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "_sortVal_1_0": Object {
+      "_sortVal_1_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_1_1": Object {
+      "_sortVal_1_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_1_2": Object {
+      "_sortVal_1_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
     },
-    "columns": Array [
+    "columns": [
       "_path0",
       "_path1",
       "_sortVal_1_0",
@@ -262,8 +262,8 @@ TableRep {
 
 exports[`async aggTree sortedTreeQuery test 3`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "Base": 3251221,
       "JobFamily": null,
       "Name": null,
@@ -286,7 +286,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 309734,
       "JobFamily": "Engineering & Systems Engineering",
       "Name": null,
@@ -309,7 +309,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 1030722,
       "JobFamily": "Executive Management",
       "Name": null,
@@ -332,122 +332,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
-      "Base": 212647,
-      "JobFamily": "Executive Management",
-      "Name": "Oversier, Paul",
-      "Rec": 1,
-      "TCOE": 288160,
-      "Title": "Assistant General Manager Operations",
-      "Union": "Non-Represented",
-      "_depth": 2,
-      "_isRoot": 0,
-      "_path0": "Executive Management",
-      "_path1": "Assistant General Manager Operations",
-      "_pivot": "Assistant General Manager Operations",
-      "_sortVal_0": 1,
-      "_sortVal_0_0": 1389290,
-      "_sortVal_0_1": 1030722,
-      "_sortVal_0_2": null,
-      "_sortVal_1": 1,
-      "_sortVal_1_0": 288160,
-      "_sortVal_1_1": 212647,
-      "_sortVal_1_2": "Assistant General Manager Operations",
-      "_sortVal_2": 0,
-    },
-    Object {
-      "Base": 206914,
-      "JobFamily": "Executive Management",
-      "Name": "DeVaughn, Marcia",
-      "Rec": 1,
-      "TCOE": 281548,
-      "Title": "Deputy General Manager",
-      "Union": "Non-Represented",
-      "_depth": 2,
-      "_isRoot": 0,
-      "_path0": "Executive Management",
-      "_path1": "Deputy General Manager",
-      "_pivot": "Deputy General Manager",
-      "_sortVal_0": 1,
-      "_sortVal_0_0": 1389290,
-      "_sortVal_0_1": 1030722,
-      "_sortVal_0_2": null,
-      "_sortVal_1": 1,
-      "_sortVal_1_0": 281548,
-      "_sortVal_1_1": 206914,
-      "_sortVal_1_2": "Deputy General Manager",
-      "_sortVal_2": 0,
-    },
-    Object {
-      "Base": 611161,
-      "JobFamily": "Executive Management",
-      "Name": null,
-      "Rec": 2,
-      "TCOE": 819582,
-      "Title": "General Manager",
-      "Union": "Non-Represented",
-      "_depth": 2,
-      "_isRoot": 0,
-      "_path0": "Executive Management",
-      "_path1": "General Manager",
-      "_pivot": "General Manager",
-      "_sortVal_0": 1,
-      "_sortVal_0_0": 1389290,
-      "_sortVal_0_1": 1030722,
-      "_sortVal_0_2": null,
-      "_sortVal_1": 1,
-      "_sortVal_1_0": 819582,
-      "_sortVal_1_1": 611161,
-      "_sortVal_1_2": "General Manager",
-      "_sortVal_2": 0,
-    },
-    Object {
-      "Base": 312461,
-      "JobFamily": "Executive Management",
-      "Name": "Crunican, Grace",
-      "Rec": 1,
-      "TCOE": 399921,
-      "Title": "General Manager",
-      "Union": "Non-Represented",
-      "_depth": 3,
-      "_isRoot": 0,
-      "_path0": "Executive Management",
-      "_path1": "General Manager",
-      "_pivot": "Crunican, Grace",
-      "_sortVal_0": 1,
-      "_sortVal_0_0": 1389290,
-      "_sortVal_0_1": 1030722,
-      "_sortVal_0_2": null,
-      "_sortVal_1": 1,
-      "_sortVal_1_0": 819582,
-      "_sortVal_1_1": 611161,
-      "_sortVal_1_2": "General Manager",
-      "_sortVal_2": 1,
-    },
-    Object {
-      "Base": 298700,
-      "JobFamily": "Executive Management",
-      "Name": "Dugger, Dorothy",
-      "Rec": 1,
-      "TCOE": 419661,
-      "Title": "General Manager",
-      "Union": "Non-Represented",
-      "_depth": 3,
-      "_isRoot": 0,
-      "_path0": "Executive Management",
-      "_path1": "General Manager",
-      "_pivot": "Dugger, Dorothy",
-      "_sortVal_0": 1,
-      "_sortVal_0_0": 1389290,
-      "_sortVal_0_1": 1030722,
-      "_sortVal_0_2": null,
-      "_sortVal_1": 1,
-      "_sortVal_1_0": 819582,
-      "_sortVal_1_1": 611161,
-      "_sortVal_1_2": "General Manager",
-      "_sortVal_2": 1,
-    },
-    Object {
+    {
       "Base": 208744,
       "JobFamily": "Finance & Accounting",
       "Name": "Schroeder, Scott",
@@ -470,7 +355,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 564028,
       "JobFamily": "Legal & Paralegal",
       "Name": null,
@@ -493,7 +378,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 366223,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": null,
@@ -516,7 +401,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 75701,
       "JobFamily": "Police",
       "Name": "Ornellas, Robert",
@@ -539,7 +424,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 130035,
       "JobFamily": "Public Affairs & Marketing",
       "Name": "Hamill, Kerry",
@@ -562,7 +447,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 152125,
       "JobFamily": "Safety",
       "Name": "Hardy, Leonard",
@@ -585,30 +470,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
-      "Base": 152125,
-      "JobFamily": "Safety",
-      "Name": "Hardy, Leonard",
-      "Rec": 1,
-      "TCOE": 211941,
-      "Title": "Chief Safety Officer",
-      "Union": "Non-Represented",
-      "_depth": 2,
-      "_isRoot": 0,
-      "_path0": "Safety",
-      "_path1": "Chief Safety Officer",
-      "_pivot": "Chief Safety Officer",
-      "_sortVal_0": 1,
-      "_sortVal_0_0": 211941,
-      "_sortVal_0_1": 152125,
-      "_sortVal_0_2": "Chief Safety Officer",
-      "_sortVal_1": 1,
-      "_sortVal_1_0": 211941,
-      "_sortVal_1_1": 152125,
-      "_sortVal_1_2": "Chief Safety Officer",
-      "_sortVal_2": 0,
-    },
-    Object {
+    {
       "Base": 413909,
       "JobFamily": "Transportation Operations",
       "Name": null,
@@ -631,95 +493,233 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
+    {
+      "Base": 212647,
+      "JobFamily": "Executive Management",
+      "Name": "Oversier, Paul",
+      "Rec": 1,
+      "TCOE": 288160,
+      "Title": "Assistant General Manager Operations",
+      "Union": "Non-Represented",
+      "_depth": 2,
+      "_isRoot": 0,
+      "_path0": "Executive Management",
+      "_path1": "Assistant General Manager Operations",
+      "_pivot": "Assistant General Manager Operations",
+      "_sortVal_0": 1,
+      "_sortVal_0_0": 1389290,
+      "_sortVal_0_1": 1030722,
+      "_sortVal_0_2": null,
+      "_sortVal_1": 1,
+      "_sortVal_1_0": 288160,
+      "_sortVal_1_1": 212647,
+      "_sortVal_1_2": "Assistant General Manager Operations",
+      "_sortVal_2": 0,
+    },
+    {
+      "Base": 206914,
+      "JobFamily": "Executive Management",
+      "Name": "DeVaughn, Marcia",
+      "Rec": 1,
+      "TCOE": 281548,
+      "Title": "Deputy General Manager",
+      "Union": "Non-Represented",
+      "_depth": 2,
+      "_isRoot": 0,
+      "_path0": "Executive Management",
+      "_path1": "Deputy General Manager",
+      "_pivot": "Deputy General Manager",
+      "_sortVal_0": 1,
+      "_sortVal_0_0": 1389290,
+      "_sortVal_0_1": 1030722,
+      "_sortVal_0_2": null,
+      "_sortVal_1": 1,
+      "_sortVal_1_0": 281548,
+      "_sortVal_1_1": 206914,
+      "_sortVal_1_2": "Deputy General Manager",
+      "_sortVal_2": 0,
+    },
+    {
+      "Base": 611161,
+      "JobFamily": "Executive Management",
+      "Name": null,
+      "Rec": 2,
+      "TCOE": 819582,
+      "Title": "General Manager",
+      "Union": "Non-Represented",
+      "_depth": 2,
+      "_isRoot": 0,
+      "_path0": "Executive Management",
+      "_path1": "General Manager",
+      "_pivot": "General Manager",
+      "_sortVal_0": 1,
+      "_sortVal_0_0": 1389290,
+      "_sortVal_0_1": 1030722,
+      "_sortVal_0_2": null,
+      "_sortVal_1": 1,
+      "_sortVal_1_0": 819582,
+      "_sortVal_1_1": 611161,
+      "_sortVal_1_2": "General Manager",
+      "_sortVal_2": 0,
+    },
+    {
+      "Base": 312461,
+      "JobFamily": "Executive Management",
+      "Name": "Crunican, Grace",
+      "Rec": 1,
+      "TCOE": 399921,
+      "Title": "General Manager",
+      "Union": "Non-Represented",
+      "_depth": 3,
+      "_isRoot": 0,
+      "_path0": "Executive Management",
+      "_path1": "General Manager",
+      "_pivot": "Crunican, Grace",
+      "_sortVal_0": 1,
+      "_sortVal_0_0": 1389290,
+      "_sortVal_0_1": 1030722,
+      "_sortVal_0_2": null,
+      "_sortVal_1": 1,
+      "_sortVal_1_0": 819582,
+      "_sortVal_1_1": 611161,
+      "_sortVal_1_2": "General Manager",
+      "_sortVal_2": 1,
+    },
+    {
+      "Base": 298700,
+      "JobFamily": "Executive Management",
+      "Name": "Dugger, Dorothy",
+      "Rec": 1,
+      "TCOE": 419661,
+      "Title": "General Manager",
+      "Union": "Non-Represented",
+      "_depth": 3,
+      "_isRoot": 0,
+      "_path0": "Executive Management",
+      "_path1": "General Manager",
+      "_pivot": "Dugger, Dorothy",
+      "_sortVal_0": 1,
+      "_sortVal_0_0": 1389290,
+      "_sortVal_0_1": 1030722,
+      "_sortVal_0_2": null,
+      "_sortVal_1": 1,
+      "_sortVal_1_0": 819582,
+      "_sortVal_1_1": 611161,
+      "_sortVal_1_2": "General Manager",
+      "_sortVal_2": 1,
+    },
+    {
+      "Base": 152125,
+      "JobFamily": "Safety",
+      "Name": "Hardy, Leonard",
+      "Rec": 1,
+      "TCOE": 211941,
+      "Title": "Chief Safety Officer",
+      "Union": "Non-Represented",
+      "_depth": 2,
+      "_isRoot": 0,
+      "_path0": "Safety",
+      "_path1": "Chief Safety Officer",
+      "_pivot": "Chief Safety Officer",
+      "_sortVal_0": 1,
+      "_sortVal_0_0": 211941,
+      "_sortVal_0_1": 152125,
+      "_sortVal_0_2": "Chief Safety Officer",
+      "_sortVal_1": 1,
+      "_sortVal_1_0": 211941,
+      "_sortVal_1_1": 152125,
+      "_sortVal_1_2": "Chief Safety Officer",
+      "_sortVal_2": 0,
+    },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "Base": Object {
+  "schema": {
+    "columnMetadata": {
+      "Base": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "JobFamily": Object {
+      "JobFamily": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "Name": Object {
+      "Name": {
         "columnType": "TEXT",
         "displayName": "Name",
       },
-      "Rec": Object {
+      "Rec": {
         "columnType": "INTEGER",
         "displayName": "Rec",
       },
-      "TCOE": Object {
+      "TCOE": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "Title": Object {
+      "Title": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "Union": Object {
+      "Union": {
         "columnType": "TEXT",
         "displayName": "Union",
       },
-      "_depth": Object {
+      "_depth": {
         "columnType": "INTEGER",
         "displayName": "_depth",
       },
-      "_isRoot": Object {
+      "_isRoot": {
         "columnType": "INTEGER",
         "displayName": "_isRoot",
       },
-      "_path0": Object {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "_path0",
       },
-      "_path1": Object {
+      "_path1": {
         "columnType": "TEXT",
         "displayName": "_path1",
       },
-      "_pivot": Object {
+      "_pivot": {
         "columnType": "TEXT",
         "displayName": "_pivot",
       },
-      "_sortVal_0": Object {
+      "_sortVal_0": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_0",
       },
-      "_sortVal_0_0": Object {
+      "_sortVal_0_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_0_1": Object {
+      "_sortVal_0_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_0_2": Object {
+      "_sortVal_0_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "_sortVal_1": Object {
+      "_sortVal_1": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_1",
       },
-      "_sortVal_1_0": Object {
+      "_sortVal_1_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_1_1": Object {
+      "_sortVal_1_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_1_2": Object {
+      "_sortVal_1_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "_sortVal_2": Object {
+      "_sortVal_2": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_2",
       },
     },
-    "columns": Array [
+    "columns": [
       "JobFamily",
       "Title",
       "Union",
@@ -749,8 +749,8 @@ TableRep {
 
 exports[`async aggTree sortedTreeQuery test 4`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "Base": 3251221,
       "JobFamily": null,
       "Name": null,
@@ -773,7 +773,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 1030722,
       "JobFamily": "Executive Management",
       "Name": null,
@@ -796,7 +796,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 611161,
       "JobFamily": "Executive Management",
       "Name": null,
@@ -819,7 +819,7 @@ TableRep {
       "_sortVal_1_2": "General Manager",
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 298700,
       "JobFamily": "Executive Management",
       "Name": "Dugger, Dorothy",
@@ -842,7 +842,7 @@ TableRep {
       "_sortVal_1_2": "General Manager",
       "_sortVal_2": 1,
     },
-    Object {
+    {
       "Base": 312461,
       "JobFamily": "Executive Management",
       "Name": "Crunican, Grace",
@@ -865,7 +865,7 @@ TableRep {
       "_sortVal_1_2": "General Manager",
       "_sortVal_2": 1,
     },
-    Object {
+    {
       "Base": 212647,
       "JobFamily": "Executive Management",
       "Name": "Oversier, Paul",
@@ -888,7 +888,7 @@ TableRep {
       "_sortVal_1_2": "Assistant General Manager Operations",
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 206914,
       "JobFamily": "Executive Management",
       "Name": "DeVaughn, Marcia",
@@ -911,7 +911,7 @@ TableRep {
       "_sortVal_1_2": "Deputy General Manager",
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 564028,
       "JobFamily": "Legal & Paralegal",
       "Name": null,
@@ -934,7 +934,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 413909,
       "JobFamily": "Transportation Operations",
       "Name": null,
@@ -957,7 +957,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 366223,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": null,
@@ -980,7 +980,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 309734,
       "JobFamily": "Engineering & Systems Engineering",
       "Name": null,
@@ -1003,7 +1003,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 208744,
       "JobFamily": "Finance & Accounting",
       "Name": "Schroeder, Scott",
@@ -1026,7 +1026,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 152125,
       "JobFamily": "Safety",
       "Name": "Hardy, Leonard",
@@ -1049,7 +1049,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 152125,
       "JobFamily": "Safety",
       "Name": "Hardy, Leonard",
@@ -1072,7 +1072,7 @@ TableRep {
       "_sortVal_1_2": "Chief Safety Officer",
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 130035,
       "JobFamily": "Public Affairs & Marketing",
       "Name": "Hamill, Kerry",
@@ -1095,7 +1095,7 @@ TableRep {
       "_sortVal_1_2": null,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 75701,
       "JobFamily": "Police",
       "Name": "Ornellas, Robert",
@@ -1119,94 +1119,94 @@ TableRep {
       "_sortVal_2": 0,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "Base": Object {
+  "schema": {
+    "columnMetadata": {
+      "Base": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "JobFamily": Object {
+      "JobFamily": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "Name": Object {
+      "Name": {
         "columnType": "TEXT",
         "displayName": "Name",
       },
-      "Rec": Object {
+      "Rec": {
         "columnType": "INTEGER",
         "displayName": "Rec",
       },
-      "TCOE": Object {
+      "TCOE": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "Title": Object {
+      "Title": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "Union": Object {
+      "Union": {
         "columnType": "TEXT",
         "displayName": "Union",
       },
-      "_depth": Object {
+      "_depth": {
         "columnType": "INTEGER",
         "displayName": "_depth",
       },
-      "_isRoot": Object {
+      "_isRoot": {
         "columnType": "INTEGER",
         "displayName": "_isRoot",
       },
-      "_path0": Object {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "_path0",
       },
-      "_path1": Object {
+      "_path1": {
         "columnType": "TEXT",
         "displayName": "_path1",
       },
-      "_pivot": Object {
+      "_pivot": {
         "columnType": "TEXT",
         "displayName": "_pivot",
       },
-      "_sortVal_0": Object {
+      "_sortVal_0": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_0",
       },
-      "_sortVal_0_0": Object {
+      "_sortVal_0_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_0_1": Object {
+      "_sortVal_0_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_0_2": Object {
+      "_sortVal_0_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "_sortVal_1": Object {
+      "_sortVal_1": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_1",
       },
-      "_sortVal_1_0": Object {
+      "_sortVal_1_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_1_1": Object {
+      "_sortVal_1_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_1_2": Object {
+      "_sortVal_1_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "_sortVal_2": Object {
+      "_sortVal_2": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_2",
       },
     },
-    "columns": Array [
+    "columns": [
       "JobFamily",
       "Title",
       "Union",
@@ -1236,8 +1236,8 @@ TableRep {
 
 exports[`basic initial view test 1`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "Base": 312461,
       "JobFamily": "Executive Management",
       "Name": "Crunican, Grace",
@@ -1250,7 +1250,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 298700,
       "JobFamily": "Executive Management",
       "Name": "Dugger, Dorothy",
@@ -1263,7 +1263,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 238269,
       "JobFamily": "Legal & Paralegal",
       "Name": "Burrows, Matthew",
@@ -1276,7 +1276,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 212647,
       "JobFamily": "Executive Management",
       "Name": "Oversier, Paul",
@@ -1289,7 +1289,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 208744,
       "JobFamily": "Finance & Accounting",
       "Name": "Schroeder, Scott",
@@ -1302,7 +1302,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 206914,
       "JobFamily": "Executive Management",
       "Name": "DeVaughn, Marcia",
@@ -1315,7 +1315,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 170383,
       "JobFamily": "Transportation Operations",
       "Name": "Crespo, Rodolfo",
@@ -1328,7 +1328,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 165470,
       "JobFamily": "Legal & Paralegal",
       "Name": "Lee, Thomas",
@@ -1341,7 +1341,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 160289,
       "JobFamily": "Legal & Paralegal",
       "Name": "Nuetzel, Victoria",
@@ -1354,7 +1354,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 157300,
       "JobFamily": "Engineering & Systems Engineering",
       "Name": "Ruffa, Frank",
@@ -1367,7 +1367,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 152434,
       "JobFamily": "Engineering & Systems Engineering",
       "Name": "Dupont, Jean-Luc",
@@ -1380,7 +1380,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 152125,
       "JobFamily": "Safety",
       "Name": "Hardy, Leonard",
@@ -1393,7 +1393,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 77446,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": "Hui, Sam",
@@ -1406,7 +1406,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 77446,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": "Reinhardt, Michael",
@@ -1419,7 +1419,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 77446,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": "Estrada, Phillip",
@@ -1432,7 +1432,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 75701,
       "JobFamily": "Police",
       "Name": "Ornellas, Robert",
@@ -1445,7 +1445,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 74068,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": "Smith, Daniel",
@@ -1458,7 +1458,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 61184,
       "JobFamily": "Transportation Operations",
       "Name": "Smith, Westley",
@@ -1471,7 +1471,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 130035,
       "JobFamily": "Public Affairs & Marketing",
       "Name": "Hamill, Kerry",
@@ -1484,7 +1484,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 60790,
       "JobFamily": "Transportation Operations",
       "Name": "Serrianni, Cheryl",
@@ -1497,7 +1497,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 60781,
       "JobFamily": "Transportation Operations",
       "Name": "Nagel, Kevin",
@@ -1510,7 +1510,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 60771,
       "JobFamily": "Transportation Operations",
       "Name": "Riggs, Joshua",
@@ -1523,7 +1523,7 @@ TableRep {
       "_pivot": "",
       "_sortVal_0": 1,
     },
-    Object {
+    {
       "Base": 59817,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": "Knight, Joshua",
@@ -1537,54 +1537,54 @@ TableRep {
       "_sortVal_0": 1,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "Base": Object {
+  "schema": {
+    "columnMetadata": {
+      "Base": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "JobFamily": Object {
+      "JobFamily": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "Name": Object {
+      "Name": {
         "columnType": "TEXT",
         "displayName": "Name",
       },
-      "Rec": Object {
+      "Rec": {
         "columnType": "INTEGER",
         "displayName": "Rec",
       },
-      "TCOE": Object {
+      "TCOE": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "Title": Object {
+      "Title": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "Union": Object {
+      "Union": {
         "columnType": "TEXT",
         "displayName": "Union",
       },
-      "_depth": Object {
+      "_depth": {
         "columnType": "INTEGER",
         "displayName": "_depth",
       },
-      "_isRoot": Object {
+      "_isRoot": {
         "columnType": "INTEGER",
         "displayName": "_isRoot",
       },
-      "_pivot": Object {
+      "_pivot": {
         "columnType": "TEXT",
         "displayName": "_pivot",
       },
-      "_sortVal_0": Object {
+      "_sortVal_0": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_0",
       },
     },
-    "columns": Array [
+    "columns": [
       "JobFamily",
       "Title",
       "Union",
@@ -1604,82 +1604,82 @@ TableRep {
 
 exports[`basic sorted aggTree test 1`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "_path0": "Engineering & Systems Engineering",
       "_sortVal_0_0": 422244,
       "_sortVal_0_1": 309734,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_sortVal_0_0": 1389290,
       "_sortVal_0_1": 1030722,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Finance & Accounting",
       "_sortVal_0_0": 287139,
       "_sortVal_0_1": 208744,
       "_sortVal_0_2": "Controller-Treasurer",
     },
-    Object {
+    {
       "_path0": "Legal & Paralegal",
       "_sortVal_0_0": 766571,
       "_sortVal_0_1": 564028,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_sortVal_0_0": 594761,
       "_sortVal_0_1": 366223,
       "_sortVal_0_2": null,
     },
-    Object {
+    {
       "_path0": "Police",
       "_sortVal_0_0": 127660,
       "_sortVal_0_1": 75701,
       "_sortVal_0_2": "Revenue Protection Guard",
     },
-    Object {
+    {
       "_path0": "Public Affairs & Marketing",
       "_sortVal_0_0": 181955,
       "_sortVal_0_1": 130035,
       "_sortVal_0_2": "Department Manager Gov't & Comm Rel",
     },
-    Object {
+    {
       "_path0": "Safety",
       "_sortVal_0_0": 211941,
       "_sortVal_0_1": 152125,
       "_sortVal_0_2": "Chief Safety Officer",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_sortVal_0_0": 709998,
       "_sortVal_0_1": 413909,
       "_sortVal_0_2": null,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "_path0": Object {
+  "schema": {
+    "columnMetadata": {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "_sortVal_0_0": Object {
+      "_sortVal_0_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_0_1": Object {
+      "_sortVal_0_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_0_2": Object {
+      "_sortVal_0_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
     },
-    "columns": Array [
+    "columns": [
       "_path0",
       "_sortVal_0_0",
       "_sortVal_0_1",
@@ -1692,134 +1692,134 @@ TableRep {
 
 exports[`basic sorted aggTree test 2`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "_path0": "Engineering & Systems Engineering",
       "_path1": "Group Manager Systems Capital Prog",
       "_sortVal_1_0": 212535,
       "_sortVal_1_1": 152434,
       "_sortVal_1_2": "Group Manager Systems Capital Prog",
     },
-    Object {
+    {
       "_path0": "Engineering & Systems Engineering",
       "_path1": "Group Manager, Capital Projects",
       "_sortVal_1_0": 209709,
       "_sortVal_1_1": 157300,
       "_sortVal_1_2": "Group Manager, Capital Projects",
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_path1": "Assistant General Manager Operations",
       "_sortVal_1_0": 288160,
       "_sortVal_1_1": 212647,
       "_sortVal_1_2": "Assistant General Manager Operations",
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_path1": "Deputy General Manager",
       "_sortVal_1_0": 281548,
       "_sortVal_1_1": 206914,
       "_sortVal_1_2": "Deputy General Manager",
     },
-    Object {
+    {
       "_path0": "Executive Management",
       "_path1": "General Manager",
       "_sortVal_1_0": 819582,
       "_sortVal_1_1": 611161,
       "_sortVal_1_2": "General Manager",
     },
-    Object {
+    {
       "_path0": "Finance & Accounting",
       "_path1": "Controller-Treasurer",
       "_sortVal_1_0": 287139,
       "_sortVal_1_1": 208744,
       "_sortVal_1_2": "Controller-Treasurer",
     },
-    Object {
+    {
       "_path0": "Legal & Paralegal",
       "_path1": "General Counsel",
       "_sortVal_1_0": 321543,
       "_sortVal_1_1": 238269,
       "_sortVal_1_2": "General Counsel",
     },
-    Object {
+    {
       "_path0": "Legal & Paralegal",
       "_path1": "Senior Attorney",
       "_sortVal_1_0": 445028,
       "_sortVal_1_1": 325759,
       "_sortVal_1_2": "Senior Attorney",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Electrician",
       "_sortVal_1_0": 113775,
       "_sortVal_1_1": 59817,
       "_sortVal_1_2": "Electrician",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Structures Inspector",
       "_sortVal_1_0": 124962,
       "_sortVal_1_1": 77446,
       "_sortVal_1_2": "Structures Inspector",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Transit Vehicle Mechanic",
       "_sortVal_1_0": 104260,
       "_sortVal_1_1": 74068,
       "_sortVal_1_2": "Transit Vehicle Mechanic",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Vehicle Inspector",
       "_sortVal_1_0": 123432,
       "_sortVal_1_1": 77446,
       "_sortVal_1_2": "Vehicle Inspector",
     },
-    Object {
+    {
       "_path0": "Maintenance, Vehicle & Facilities",
       "_path1": "Wayside Inspector",
       "_sortVal_1_0": 128332,
       "_sortVal_1_1": 77446,
       "_sortVal_1_2": "Wayside Inspector",
     },
-    Object {
+    {
       "_path0": "Police",
       "_path1": "Revenue Protection Guard",
       "_sortVal_1_0": 127660,
       "_sortVal_1_1": 75701,
       "_sortVal_1_2": "Revenue Protection Guard",
     },
-    Object {
+    {
       "_path0": "Public Affairs & Marketing",
       "_path1": "Department Manager Gov't & Comm Rel",
       "_sortVal_1_0": 181955,
       "_sortVal_1_1": 130035,
       "_sortVal_1_2": "Department Manager Gov't & Comm Rel",
     },
-    Object {
+    {
       "_path0": "Safety",
       "_path1": "Chief Safety Officer",
       "_sortVal_1_0": 211941,
       "_sortVal_1_1": 152125,
       "_sortVal_1_2": "Chief Safety Officer",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_path1": "Chief Transportation Officer",
       "_sortVal_1_0": 238211,
       "_sortVal_1_1": 170383,
       "_sortVal_1_2": "Chief Transportation Officer",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_path1": "Station Agent",
       "_sortVal_1_0": 352988,
       "_sortVal_1_1": 182342,
       "_sortVal_1_2": "Station Agent",
     },
-    Object {
+    {
       "_path0": "Transportation Operations",
       "_path1": "Train Operator",
       "_sortVal_1_0": 118799,
@@ -1827,30 +1827,30 @@ TableRep {
       "_sortVal_1_2": "Train Operator",
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "_path0": Object {
+  "schema": {
+    "columnMetadata": {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "_path1": Object {
+      "_path1": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "_sortVal_1_0": Object {
+      "_sortVal_1_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_1_1": Object {
+      "_sortVal_1_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_1_2": Object {
+      "_sortVal_1_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
     },
-    "columns": Array [
+    "columns": [
       "_path0",
       "_path1",
       "_sortVal_1_0",
@@ -1864,8 +1864,8 @@ TableRep {
 
 exports[`basic sorted aggTree test 3`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "Base": 309734,
       "JobFamily": "Engineering & Systems Engineering",
       "Name": null,
@@ -1885,7 +1885,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 1030722,
       "JobFamily": "Executive Management",
       "Name": null,
@@ -1905,7 +1905,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 208744,
       "JobFamily": "Finance & Accounting",
       "Name": "Schroeder, Scott",
@@ -1925,7 +1925,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 564028,
       "JobFamily": "Legal & Paralegal",
       "Name": null,
@@ -1945,7 +1945,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 366223,
       "JobFamily": "Maintenance, Vehicle & Facilities",
       "Name": null,
@@ -1965,7 +1965,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 75701,
       "JobFamily": "Police",
       "Name": "Ornellas, Robert",
@@ -1985,7 +1985,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 130035,
       "JobFamily": "Public Affairs & Marketing",
       "Name": "Hamill, Kerry",
@@ -2005,7 +2005,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 152125,
       "JobFamily": "Safety",
       "Name": "Hardy, Leonard",
@@ -2025,7 +2025,7 @@ TableRep {
       "_sortVal_1": 0,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 413909,
       "JobFamily": "Transportation Operations",
       "Name": null,
@@ -2046,82 +2046,82 @@ TableRep {
       "_sortVal_2": 0,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "Base": Object {
+  "schema": {
+    "columnMetadata": {
+      "Base": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "JobFamily": Object {
+      "JobFamily": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "Name": Object {
+      "Name": {
         "columnType": "TEXT",
         "displayName": "Name",
       },
-      "Rec": Object {
+      "Rec": {
         "columnType": "INTEGER",
         "displayName": "Rec",
       },
-      "TCOE": Object {
+      "TCOE": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "Title": Object {
+      "Title": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "Union": Object {
+      "Union": {
         "columnType": "TEXT",
         "displayName": "Union",
       },
-      "_depth": Object {
+      "_depth": {
         "columnType": "INTEGER",
         "displayName": "_depth",
       },
-      "_isRoot": Object {
+      "_isRoot": {
         "columnType": "INTEGER",
         "displayName": "_isRoot",
       },
-      "_path0": Object {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "_path0",
       },
-      "_path1": Object {
+      "_path1": {
         "columnType": "TEXT",
         "displayName": "_path1",
       },
-      "_pivot": Object {
+      "_pivot": {
         "columnType": "TEXT",
         "displayName": "_pivot",
       },
-      "_sortVal_0": Object {
+      "_sortVal_0": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_0",
       },
-      "_sortVal_0_0": Object {
+      "_sortVal_0_0": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "_sortVal_0_1": Object {
+      "_sortVal_0_1": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "_sortVal_0_2": Object {
+      "_sortVal_0_2": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "_sortVal_1": Object {
+      "_sortVal_1": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_1",
       },
-      "_sortVal_2": Object {
+      "_sortVal_2": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_2",
       },
     },
-    "columns": Array [
+    "columns": [
       "JobFamily",
       "Title",
       "Union",
@@ -2148,8 +2148,8 @@ TableRep {
 
 exports[`open specific node 1`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "Base": 212647,
       "JobFamily": "Executive Management",
       "Name": "Oversier, Paul",
@@ -2166,7 +2166,7 @@ TableRep {
       "_sortVal_1": 1,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 206914,
       "JobFamily": "Executive Management",
       "Name": "DeVaughn, Marcia",
@@ -2183,7 +2183,7 @@ TableRep {
       "_sortVal_1": 1,
       "_sortVal_2": 0,
     },
-    Object {
+    {
       "Base": 611161,
       "JobFamily": "Executive Management",
       "Name": null,
@@ -2201,70 +2201,70 @@ TableRep {
       "_sortVal_2": 0,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "Base": Object {
+  "schema": {
+    "columnMetadata": {
+      "Base": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "JobFamily": Object {
+      "JobFamily": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "Name": Object {
+      "Name": {
         "columnType": "TEXT",
         "displayName": "Name",
       },
-      "Rec": Object {
+      "Rec": {
         "columnType": "INTEGER",
         "displayName": "Rec",
       },
-      "TCOE": Object {
+      "TCOE": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "Title": Object {
+      "Title": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "Union": Object {
+      "Union": {
         "columnType": "TEXT",
         "displayName": "Union",
       },
-      "_depth": Object {
+      "_depth": {
         "columnType": "INTEGER",
         "displayName": "_depth",
       },
-      "_isRoot": Object {
+      "_isRoot": {
         "columnType": "INTEGER",
         "displayName": "_isRoot",
       },
-      "_path0": Object {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "_path0",
       },
-      "_path1": Object {
+      "_path1": {
         "columnType": "TEXT",
         "displayName": "_path1",
       },
-      "_pivot": Object {
+      "_pivot": {
         "columnType": "TEXT",
         "displayName": "_pivot",
       },
-      "_sortVal_0": Object {
+      "_sortVal_0": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_0",
       },
-      "_sortVal_1": Object {
+      "_sortVal_1": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_1",
       },
-      "_sortVal_2": Object {
+      "_sortVal_2": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_2",
       },
     },
-    "columns": Array [
+    "columns": [
       "JobFamily",
       "Title",
       "Union",
@@ -2288,8 +2288,8 @@ TableRep {
 
 exports[`open specific node 2`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "Base": 312461,
       "JobFamily": "Executive Management",
       "Name": "Crunican, Grace",
@@ -2306,7 +2306,7 @@ TableRep {
       "_sortVal_1": 1,
       "_sortVal_2": 1,
     },
-    Object {
+    {
       "Base": 298700,
       "JobFamily": "Executive Management",
       "Name": "Dugger, Dorothy",
@@ -2324,70 +2324,70 @@ TableRep {
       "_sortVal_2": 1,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "Base": Object {
+  "schema": {
+    "columnMetadata": {
+      "Base": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "JobFamily": Object {
+      "JobFamily": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "Name": Object {
+      "Name": {
         "columnType": "TEXT",
         "displayName": "Name",
       },
-      "Rec": Object {
+      "Rec": {
         "columnType": "INTEGER",
         "displayName": "Rec",
       },
-      "TCOE": Object {
+      "TCOE": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "Title": Object {
+      "Title": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "Union": Object {
+      "Union": {
         "columnType": "TEXT",
         "displayName": "Union",
       },
-      "_depth": Object {
+      "_depth": {
         "columnType": "INTEGER",
         "displayName": "_depth",
       },
-      "_isRoot": Object {
+      "_isRoot": {
         "columnType": "INTEGER",
         "displayName": "_isRoot",
       },
-      "_path0": Object {
+      "_path0": {
         "columnType": "TEXT",
         "displayName": "_path0",
       },
-      "_path1": Object {
+      "_path1": {
         "columnType": "TEXT",
         "displayName": "_path1",
       },
-      "_pivot": Object {
+      "_pivot": {
         "columnType": "TEXT",
         "displayName": "_pivot",
       },
-      "_sortVal_0": Object {
+      "_sortVal_0": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_0",
       },
-      "_sortVal_1": Object {
+      "_sortVal_1": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_1",
       },
-      "_sortVal_2": Object {
+      "_sortVal_2": {
         "columnType": "INTEGER",
         "displayName": "_sortVal_2",
       },
     },
-    "columns": Array [
+    "columns": [
       "JobFamily",
       "Title",
       "Union",
@@ -2411,8 +2411,8 @@ TableRep {
 
 exports[`rootQuery Test 1`] = `
 TableRep {
-  "rowData": Array [
-    Object {
+  "rowData": [
+    {
       "Base": 3251221,
       "JobFamily": null,
       "Name": null,
@@ -2425,50 +2425,50 @@ TableRep {
       "_pivot": null,
     },
   ],
-  "schema": Object {
-    "columnMetadata": Object {
-      "Base": Object {
+  "schema": {
+    "columnMetadata": {
+      "Base": {
         "columnType": "INTEGER",
         "displayName": "Base",
       },
-      "JobFamily": Object {
+      "JobFamily": {
         "columnType": "TEXT",
         "displayName": "JobFamily",
       },
-      "Name": Object {
+      "Name": {
         "columnType": "TEXT",
         "displayName": "Name",
       },
-      "Rec": Object {
+      "Rec": {
         "columnType": "INTEGER",
         "displayName": "Rec",
       },
-      "TCOE": Object {
+      "TCOE": {
         "columnType": "INTEGER",
         "displayName": "TCOE",
       },
-      "Title": Object {
+      "Title": {
         "columnType": "TEXT",
         "displayName": "Title",
       },
-      "Union": Object {
+      "Union": {
         "columnType": "TEXT",
         "displayName": "Union",
       },
-      "_depth": Object {
+      "_depth": {
         "columnType": "INTEGER",
         "displayName": "_depth",
       },
-      "_isRoot": Object {
+      "_isRoot": {
         "columnType": "INTEGER",
         "displayName": "_isRoot",
       },
-      "_pivot": Object {
+      "_pivot": {
         "columnType": "TEXT",
         "displayName": "_pivot",
       },
     },
-    "columns": Array [
+    "columns": [
       "JobFamily",
       "Title",
       "Union",

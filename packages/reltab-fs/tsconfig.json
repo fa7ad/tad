@@ -1,11 +1,19 @@
 {
+  // https://aka.ms/tsconfig
   "compilerOptions": {
+    "rootDir": "./src",
     "outDir": "./dist",
-    "declaration": true,
+
+    "module": "nodenext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "types": ["node"],
+
     "sourceMap": true,
-    "target": "ES5",
+    "declaration": true,
+    "declarationMap": true,
+
     "strict": true,
-    "lib": ["es6", "es2017", "dom"]
-  },
-  "include": ["./src/*", "./test/*.ts"]
+    "skipLibCheck": true,
+  }
 }

@@ -1,12 +1,12 @@
 import * as sqlite3 from "sqlite3";
 import * as reltab from "reltab";
 import * as reltabSqlite from "../src/reltab-sqlite";
-import * as tp from "typed-promisify";
-import { textSpanContainsPosition } from "typescript";
-import { delimiter } from "path";
-import * as log from "loglevel";
+// import * as tp from "typed-promisify";
+// import { textSpanContainsPosition } from "typescript";
+// import { delimiter } from "path";
+import log from "loglevel";
 import * as util from "./testUtils";
-import * as _ from "lodash";
+import _ from "lodash";
 import { asString, DataSourceConnection, DbDataSource } from "reltab";
 
 const { col, constVal } = reltab;
@@ -20,7 +20,7 @@ const q1 = reltab.tableQuery("barttest");
 test("t0 - trivial query generation", () => {
   expect(q1).toMatchInlineSnapshot(`
     QueryExp {
-      "_rep": Object {
+      "_rep": {
         "operator": "table",
         "tableName": "barttest",
       },
@@ -30,11 +30,11 @@ test("t0 - trivial query generation", () => {
 });
 
 const importCsv = async (db: sqlite3.Database, path: string) => {
-  const md = await reltabSqlite.fastImport(db, path);
+  await reltabSqlite.fastImport(db, path);
 };
 
 beforeAll(async (): Promise<DataSourceConnection> => {
-  log.setLevel("info"); // use "debug" for even more verbosity
+  log.setLevel("debug"); // use "debug" for even more verbosity
   const ctx = await reltab.getConnection({
     providerName: "sqlite",
     resourceId: ":memory:",
@@ -47,8 +47,8 @@ beforeAll(async (): Promise<DataSourceConnection> => {
 
   const db = driver.db;
 
-  await importCsv(db, "test/support/sample.csv");
-  await importCsv(db, "test/support/barttest.csv");
+  await importCsv(db, "./test/support/sample.csv");
+  await importCsv(db, "./test/support/barttest.csv");
 
   return testCtx;
 });
@@ -123,7 +123,7 @@ test("basic groupBy", async () => {
 });
 
 const q5 = bartTableQuery.filter(
-  reltab.and().eq(col("JobFamily"), constVal("Executive Management"))
+  reltab.and().eq(col("JobFamily"), constVal("Executive Management")),
 );
 
 test("basic filter", async () => {
@@ -138,7 +138,7 @@ test("escaped literal string filter", async () => {
   const q5b = q1.filter(
     reltab
       .and()
-      .eq(col("Title"), constVal("Department Manager Gov't & Comm Rel"))
+      .eq(col("Title"), constVal("Department Manager Gov't & Comm Rel")),
   );
 
   const res = await testCtx.evalQuery(q5b);
@@ -189,7 +189,7 @@ test("mapColumnsByIndex", async () => {
 });
 
 const q8 = q5.concat(
-  q1.filter(reltab.and().eq(col("JobFamily"), constVal("Safety")))
+  q1.filter(reltab.and().eq(col("JobFamily"), constVal("Safety"))),
 );
 
 test("concat", async () => {

@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/reltab" },
+    { "path": "packages/reltab-duckdb" },
+    { "path": "packages/reltab-fs" },
+    { "path": "packages/aggtree" },
+    { "path": "packages/tadviewer" },
+    { "path": "packages/tad-app" }
+  ]
+}

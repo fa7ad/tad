@@ -1,12 +1,24 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
     "outDir": "./dist",
-    "declaration": true,
-    "module": "CommonJS",
+
+    "module": "nodenext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "types": ["node"],
     "sourceMap": true,
-    "target": "ES2015",
+    "declaration": true,
+    "declarationMap": true,
+
+    // Recommended Options
     "strict": true,
-    "lib": ["es6", "es2017", "dom"]
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
-  "include": ["./src/*", "./test/*.ts"]
+  "include": ["./src"],
+  "exclude": ["node_modules", "./dist", "./test"]
 }

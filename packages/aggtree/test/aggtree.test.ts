@@ -3,19 +3,17 @@ import * as reltab from "reltab";
 import * as aggtree from "../src/aggtree";
 import { PathTree } from "../src/PathTree";
 import * as reltabSqlite from "reltab-sqlite";
-import { textSpanContainsPosition, textSpanContainsTextSpan } from "typescript";
-import { delimiter } from "path";
-import * as log from "loglevel";
-import * as util from "./testUtils";
-import { executionAsyncId } from "async_hooks";
+import log from "loglevel";
+import { logTable, columnSum } from "./testUtils";
 import { DataSourceId, getConnection } from "reltab";
 
 log.setLevel("info");
 
-let testCtx: reltabSqlite.SqliteContext;
+let testDriver: reltabSqlite.SqliteDriver;
+let testCtx: reltab.DbDataSource;
 
 const importCsv = async (db: sqlite3.Database, path: string) => {
-  const md = await reltabSqlite.fastImport(db, path);
+  await reltabSqlite.fastImport(db, path);
 };
 
 const pcols = ["JobFamily", "Title", "Union", "Name", "Base", "TCOE"];
@@ -23,27 +21,28 @@ const q0 = reltab.tableQuery("barttest").project(pcols);
 
 let tree0: aggtree.VPivotTree;
 
-beforeAll(async (): Promise<reltabSqlite.SqliteContext> => {
+beforeAll(async (): Promise<reltabSqlite.SqliteDriver> => {
   log.setLevel("info"); // use "debug" for even more verbosity
   const showQueries = true;
   const connKey: DataSourceId = {
     providerName: "sqlite",
     resourceId: ":memory:",
   };
-  const ctx = await getConnection(connKey);
+  const ctx = await getConnection(connKey) as reltab.DbDataSource;
 
-  testCtx = ctx as reltabSqlite.SqliteContext;
+  testCtx = ctx;
+  testDriver = ctx.db as reltabSqlite.SqliteDriver;
 
-  const db = testCtx.db;
+  const db = testDriver.db;
 
   await importCsv(db, "../reltab-sqlite/test/support/sample.csv");
   await importCsv(db, "../reltab-sqlite/test/support/barttest.csv");
 
-  const schema = await aggtree.getBaseSchema(testCtx, q0);
+  const schema = await aggtree.getBaseSchema(ctx, q0);
   log.debug("got schema: ", schema);
 
   tree0 = aggtree.vpivot(
-    testCtx,
+    ctx,
     q0,
     schema,
     ["JobFamily", "Title"],
@@ -52,7 +51,7 @@ beforeAll(async (): Promise<reltabSqlite.SqliteContext> => {
     []
   );
 
-  return testCtx;
+  return testDriver;
 });
 
 test("rootQuery Test", async () => {
@@ -61,7 +60,7 @@ test("rootQuery Test", async () => {
 
   const res0 = await testCtx.evalQuery(rq0!);
   log.info("root query result:");
-  util.logTable(res0);
+  logTable(res0);
   expect(res0).toMatchSnapshot();
 });
 
@@ -70,7 +69,7 @@ test("initial applyPath operations", async () => {
   log.info("open root query:");
   log.info(q1.toJS());
   const res1 = await testCtx.evalQuery(q1);
-  util.logTable(res1);
+  logTable(res1);
 
   const expCols = [
     "JobFamily",
@@ -93,7 +92,7 @@ test("initial applyPath operations", async () => {
   expect(res1.schema.columns).toEqual(expCols);
   expect(res1.rowData.length).toBe(9);
 
-  const actSum = util.columnSum(res1, "TCOE");
+  const actSum = columnSum(res1, "TCOE");
 
   expect(actSum).toBe(4691559);
 });
@@ -121,7 +120,7 @@ test("open specific node", async () => {
   const res4 = await testCtx.evalQuery(q4);
 
   // console.log("after treeQuery for path /Executive Management: ");
-  util.logTable(res4);
+  logTable(res4);
 });
 
 // Based on aggTreeTest1 from original Tad test suite:
@@ -240,7 +239,7 @@ test("basic initial view test", async () => {
 
   console.log("full sorted tree query:\n", stq.toJS());
 
-  const sqlStr = await rtc.toSql(stq);
+  const sqlStr = await rtc.getSqlForQuery(q0);
 
   console.log("SQL query: ", sqlStr);
 

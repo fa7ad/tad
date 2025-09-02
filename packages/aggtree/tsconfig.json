@@ -1,11 +1,25 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "downlevelIteration": true,
-    "declaration": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2020",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
     "strict": true,
-    "target": "ES5",
-    "lib": ["es6", "es2017", "dom"]
+    "noImplicitAny": true,
+
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["es2020"],
+
+    "outDir": "dist",
+    "sourceMap": true,
+    "declaration": true,
+    "rootDir": "src"
   },
-  "include": ["./src/*", "./test/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test"]
 }

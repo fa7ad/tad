@@ -16,10 +16,10 @@ exports.default = async function notarizing(context) {
   }
 
   return await notarize({
-    appBundleId: "com.antonycourtney.tad",
+    appBundleId: "com.fa7ad.tad",
     appPath: `${appOutDir}/${appName}.app`,
     appleId,
     appleIdPassword: process.env.APPLEIDPASS,
-    teamId: "VPS8BQAV8D",
+    teamId: "SX927HG83F",
   });
 };

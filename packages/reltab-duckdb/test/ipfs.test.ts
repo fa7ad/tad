@@ -1,20 +1,10 @@
 import * as duckdb from "duckdb-async";
 import * as reltab from "reltab";
 import * as reltabDuckDB from "../src/reltab-duckdb";
-import * as tp from "typed-promisify";
-import { textSpanContainsPosition, textSpanContainsTextSpan } from "typescript";
-import { delimiter } from "path";
-import * as log from "loglevel";
-import * as util from "./testUtils";
-import * as _ from "lodash";
+import _ from "lodash";
 import {
-  asString,
   DataSourceConnection,
   DbDataSource,
-  Row,
-  Schema,
-  tableQuery,
-  TableRep,
 } from "reltab";
 import { getFormattedRows } from "./testUtils";
 

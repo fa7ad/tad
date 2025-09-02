@@ -1,5 +1,5 @@
 import * as duckdb from "duckdb-async";
-import * as _ from "lodash";
+import _ from "lodash";
 import * as reltab from "reltab";
 import {
   asString,
@@ -27,7 +27,7 @@ const q1 = reltab.tableQuery("barttest");
 test("t0 - trivial query generation", () => {
   expect(q1).toMatchInlineSnapshot(`
     QueryExp {
-      "_rep": Object {
+      "_rep": {
         "operator": "table",
         "tableName": "barttest",
       },
@@ -139,11 +139,17 @@ test("basic groupBy", async () => {
   const groupSum = util.columnSum(qres, "TCOE");
   expect(BigInt(groupSum)).toBe(BigInt(tcoeSum));
 
+  // need deterministic sort order so we don't get a false failing test
+  qres.rowData.sort((a, b) => {
+    if (a.TCOE == null || b.TCOE == null) return 0; // typescript
+    return a.TCOE < b.TCOE ? -1 : a.TCOE > b.TCOE ? 1 : 0;
+  });
+
   expect(qres).toMatchSnapshot();
 });
 
 const q5 = bartTableQuery.filter(
-  reltab.and().eq(col("Job Family"), constVal("Executive Management"))
+  reltab.and().eq(col("Job Family"), constVal("Executive Management")),
 );
 
 test("basic filter", async () => {
@@ -158,7 +164,7 @@ test("escaped literal string filter", async () => {
   const q5b = q1.filter(
     reltab
       .and()
-      .eq(col("Title"), constVal("Department Manager Gov't & Comm Rel"))
+      .eq(col("Title"), constVal("Department Manager Gov't & Comm Rel")),
   );
 
   const res = await testCtx.evalQuery(q5b);
@@ -209,7 +215,7 @@ test("mapColumnsByIndex", async () => {
 });
 
 const q8 = q5.concat(
-  q1.filter(reltab.and().eq(col("Job Family"), constVal("Safety")))
+  q1.filter(reltab.and().eq(col("Job Family"), constVal("Safety"))),
 );
 
 test("concat", async () => {
@@ -279,7 +285,7 @@ const realType = reltab.DuckDBDialect.columnTypes["REAL"];
 
 const qex6 = q1.extend(
   "BasePct",
-  divide(cast(col("Base"), realType), cast(col("TCOE"), realType))
+  divide(cast(col("Base"), realType), cast(col("TCOE"), realType)),
 );
 test("extend with binary expression col and casts", async () => {
   const res = await testCtx.evalQuery(qex6);
@@ -290,7 +296,7 @@ test("extend with binary expression col and casts", async () => {
 
 const qex7 = qex6.extend(
   "BasePctInt",
-  round(multiply(col("BasePct"), cast(constVal(100), realType)))
+  round(multiply(col("BasePct"), cast(constVal(100), realType))),
 );
 test("extend with unary op round", async () => {
   const res = await testCtx.evalQuery(qex7);
@@ -332,12 +338,12 @@ test("basic DuckDb types", async () => {
   console.log("rowData: ", rowData);
 
   expect(rowData).toMatchInlineSnapshot(`
-    Array [
-      Object {
+    [
+      {
         "b": true,
         "i": 99,
       },
-      Object {
+      {
         "b": false,
         "i": 87,
       },
@@ -361,11 +367,11 @@ test("DuckDb date type", async () => {
   console.log("rowData: ", rowData);
 
   expect(rowData).toMatchInlineSnapshot(`
-    Array [
-      Object {
+    [
+      {
         "d": 1991-07-21T00:00:00.000Z,
       },
-      Object {
+      {
         "d": 2022-02-11T00:00:00.000Z,
       },
     ]
@@ -402,7 +408,7 @@ test("DuckDb timestamp types", async () => {
       -- cast('${d2}' as timestamp_s) as t_s,
       cast('${d2}' as datetime) as dt,
       cast('${d2}' as date) as d
-      );`
+      );`,
   );
 
   const q0 = tableQuery("timestamp_test");
@@ -411,14 +417,14 @@ test("DuckDb timestamp types", async () => {
   const fmtRows = getFormattedRows(q0res);
 
   expect(fmtRows).toMatchInlineSnapshot(`
-    Array [
-      Array [
+    [
+      [
         "1991-07-21T11:30:00.000Z",
         "1991-07-21T11:30:00.000Z",
         "1991-07-21T11:30:00.000Z",
         "1991-07-21",
       ],
-      Array [
+      [
         "2022-02-11T14:15:45.000Z",
         "2022-02-11T14:15:45.000Z",
         "2022-02-11T14:15:45.000Z",

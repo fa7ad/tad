@@ -2,10 +2,10 @@
  * Import CSV files into DuckDb
  */
 
-import * as log from "loglevel";
+import log from "loglevel";
 import * as path from "path";
-import { Connection, Database } from "duckdb-async";
-import * as prettyHRTime from "pretty-hrtime";
+import { Database } from "duckdb-async";
+import prettyHRTime from "pretty-hrtime";
 import { initS3 } from "./s3utils";
 let uniqMap: { [cid: string]: number } = {};
 

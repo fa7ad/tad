@@ -1,13 +1,8 @@
 import * as sqlite3 from "sqlite3";
 import * as reltab from "reltab";
 import * as reltabSqlite from "../src/reltab-sqlite";
-import * as tp from "typed-promisify";
-import { textSpanContainsPosition } from "typescript";
-import { delimiter } from "path";
-import * as log from "loglevel";
-import * as util from "./testUtils";
-import * as _ from "lodash";
-import { asString } from "reltab";
+import log from "loglevel";
+import _ from "lodash";
 
 const importCsv = async (db: sqlite3.Database, path: string) => {
   const md = await reltabSqlite.fastImport(db, path);
@@ -20,7 +15,7 @@ async function main() {
     resourceId: ":memory:",
   });
 
-  let testCtx = ctx as reltabSqlite.SqliteContext;
+  let testCtx = ctx as unknown as reltabSqlite.SqliteDriver;
 
   const db = testCtx.db;
 

@@ -1,19 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Bash script for launching tad from command line,
 # based on atom.sh from Tad text editor:
 #  https://github.com/atom/atom
 #
-if [ "$(uname)" == 'Darwin' ]; then
+if [ "$(uname)" = 'Darwin' ]; then
   OS='Mac'
-elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+elif [ "$(uname -s | cut -c 1-5)" = 'Linux' ]; then
   OS='Linux'
 else
   echo "Your platform ($(uname -a)) is not supported."
   exit 1
 fi
 
-if [ "$(basename $0)" == 'tad-beta' ]; then
+if [ "$(basename "$0")" = 'tad-beta' ]; then
   BETA_VERSION=true
 else
   BETA_VERSION=
@@ -35,6 +35,8 @@ while getopts ":wtfvh-:" opt; do
         foreground|test)
           EXPECT_OUTPUT=1
           ;;
+        *)
+          ;;
       esac
       ;;
     w)
@@ -47,18 +49,20 @@ while getopts ":wtfvh-:" opt; do
     f|t)
       EXPECT_OUTPUT=1
       ;;
+    *)
+      ;;
   esac
 done
 
-if [ $REDIRECT_STDERR ]; then
+if [ "$REDIRECT_STDERR" ]; then
   exec 2> /dev/null
 fi
 
-if [ $EXPECT_OUTPUT ]; then
+if [ "$EXPECT_OUTPUT" ]; then
   export ELECTRON_ENABLE_LOGGING=1
 fi
 
-if [ $OS == 'Mac' ]; then
+if [ "$OS" = 'Mac' ]; then
   if [ -n "$BETA_VERSION" ]; then
     TAD_APP_NAME="Tad Beta.app"
     TAD_EXECUTABLE_NAME="Tad Beta"
@@ -85,17 +89,17 @@ if [ $OS == 'Mac' ]; then
     fi
   fi
 
-  if [ $EXPECT_OUTPUT ]; then
+  if [ "$EXPECT_OUTPUT" ]; then
     "$TAD_PATH/$TAD_APP_NAME/Contents/MacOS/$TAD_EXECUTABLE_NAME" --executed-from="$(pwd)" "$@"
     exit $?
   else
-    # open -a "$TAD_PATH/$TAD_APP_NAME" -n --args --executed-from="$(pwd)" --pid=$$ --path-environment="$PATH" "$@"
+    # open -a "$TAD_PATH/$TAD_APP_NAME" -n --args --executed-from="$(pwd)" --pid=$ --path-environment="$PATH" "$@"
     # echo "Starting $TAD_PATH/$TAD_APP_NAME" -n --args --executed-from="$(pwd)" "$@"
     open -a "$TAD_PATH/$TAD_APP_NAME" -n --args --executed-from="$(pwd)" "$@"
   fi
-elif [ $OS == 'Linux' ]; then
+elif [ "$OS" = 'Linux' ]; then
   SCRIPT=$(readlink -f "$0")
-  USR_DIRECTORY=$(readlink -f $(dirname $SCRIPT)/..)
+  USR_DIRECTORY=$(readlink -f "$(dirname "$SCRIPT")/..")
 
   if [ -n "$BETA_VERSION" ]; then
     TAD_PATH="$USR_DIRECTORY/share/tad-beta/tad"
@@ -106,19 +110,20 @@ elif [ $OS == 'Linux' ]; then
   TAD_HOME="${TAD_HOME:-$HOME/.tad}"
   mkdir -p "$TAD_HOME"
 
-  : ${TMPDIR:=/tmp}
+  : "${TMPDIR:=/tmp}"
 
   [ -x "$TAD_PATH" ] || TAD_PATH="$TMPDIR/tad-build/Tad/tad"
 
-  if [ $EXPECT_OUTPUT ]; then
-    "$TAD_PATH" --executed-from="$(pwd)" --pid=$$ "$@"
+  if [ "$EXPECT_OUTPUT" ]; then
+    "$TAD_PATH" --executed-from="$(pwd)" --pid=$ "$@"
     exit $?
   else
     (
-    nohup "$TAD_PATH" --executed-from="$(pwd)" --pid=$$ "$@" > "$TAD_HOME/nohup.out" 2>&1
-    if [ $? -ne 0 ]; then
+    nohup "$TAD_PATH" --executed-from="$(pwd)" --pid=$ "$@" > "$TAD_HOME/nohup.out" 2>&1
+    ret=$?
+    if [ $ret -ne 0 ]; then
       cat "$TAD_HOME/nohup.out"
-      exit $?
+      exit $ret
     fi
     ) &
   fi
@@ -131,7 +136,7 @@ on_die() {
 trap 'on_die' SIGQUIT SIGTERM
 
 # If the wait flag is set, don't exit this process until Tad tells it to.
-if [ $WAIT ]; then
+if [ "$WAIT" ]; then
   while true; do
     sleep 1
   done
